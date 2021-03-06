@@ -16,6 +16,7 @@ node ('app_server'){
         			            }
       }
     stage('Pull-image-server') {
+        sh "docker-compose down"
         sh "docker-compose up -d"	
       }
    
